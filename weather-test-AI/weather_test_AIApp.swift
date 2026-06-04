@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct weather_test_AIApp: App {
+    
+    @State private var account = Account(userName: "Neph")
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(account)
         }
     }
 }

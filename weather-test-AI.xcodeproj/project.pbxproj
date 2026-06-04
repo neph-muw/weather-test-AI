@@ -29,9 +29,23 @@
 		797567822F6EFA1700251E21 /* weather-test-AIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "weather-test-AIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		79B8FE012FAE1FD800279C18 /* Exceptions for "weather-test-AI" folder in "weather-test-AITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				NetworkModels/InformationPieceModelNet.swift,
+				NetworkServices/PiecesNetworkService.swift,
+			);
+			target = 797567772F6EFA1700251E21 /* weather-test-AITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		7975676D2F6EFA1600251E21 /* weather-test-AI */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				79B8FE012FAE1FD800279C18 /* Exceptions for "weather-test-AI" folder in "weather-test-AITests" target */,
+			);
 			path = "weather-test-AI";
 			sourceTree = "<group>";
 		};
