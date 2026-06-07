@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		79A5918E2FD58BB400E9CF10 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 79A5918D2FD58BB400E9CF10 /* SwiftyJSON */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		797567792F6EFA1700251E21 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -73,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79A5918E2FD58BB400E9CF10 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +154,7 @@
 			);
 			name = "weather-test-AITests";
 			packageProductDependencies = (
+				79A5918D2FD58BB400E9CF10 /* SwiftyJSON */,
 			);
 			productName = "weather-test-AITests";
 			productReference = 797567782F6EFA1700251E21 /* weather-test-AITests.xctest */;
@@ -209,6 +215,9 @@
 			);
 			mainGroup = 797567622F6EFA1600251E21;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				79A5918C2FD58BB400E9CF10 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7975676C2F6EFA1600251E21 /* Products */;
 			projectDirPath = "";
@@ -592,6 +601,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		79A5918C2FD58BB400E9CF10 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		79A5918D2FD58BB400E9CF10 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 79A5918C2FD58BB400E9CF10 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 797567632F6EFA1600251E21 /* Project object */;
 }

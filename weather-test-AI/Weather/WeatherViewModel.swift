@@ -10,7 +10,7 @@ import Combine
 
 final class WeatherViewModel: ObservableObject {
     
-    @Published var weather: WeatherResponse?
+    @Published var weather: WeatherResponseNet?
     @Published var isLoading = false
     @Published var error: String?
     

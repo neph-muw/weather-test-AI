@@ -16,12 +16,12 @@ class PiecesNetworkService: PiecesNetworkServiceProtocol {
     var pieces: [InformationPieceModelNet] = [
         InformationPieceModelNet(title: "In my head",
                                 description: "Loading...",
-                                image: "",
+                                image: "sun.max",
                                 link: "",
                                 sunshineDayInYourHead: true),
         InformationPieceModelNet(title: "Toronto TV",
                                  description: "Loading...",
-                                 image: "",
+                                 image: "sun.max",
                                  link: "",
                                  sunshineDayInYourHead: true)]
 

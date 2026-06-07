@@ -313,7 +313,7 @@ import Foundation
 import Combine
 
 protocol WeatherServiceProtocol {
-    func fetchCurrentWeather(lat: Double, lon: Double) -> AnyPublisher<WeatherResponse, Error>
+    func fetchCurrentWeather(lat: Double, lon: Double) -> AnyPublisher<WeatherResponseNet, Error>
 }
 
 final class WeatherService: WeatherServiceProtocol {
@@ -345,7 +345,7 @@ final class WeatherService: WeatherServiceProtocol {
         self.baseURL = baseURL
     }
     
-    func fetchCurrentWeather(lat: Double, lon: Double) -> AnyPublisher<WeatherResponse, Error> {
+    func fetchCurrentWeather(lat: Double, lon: Double) -> AnyPublisher<WeatherResponseNet, Error> {
         do {
             let url = try makeURL(lat: lat, lon: lon)
             
@@ -354,7 +354,7 @@ final class WeatherService: WeatherServiceProtocol {
                     try self.validate(output.response)
                     return output.data
                 }
-                .decode(type: WeatherResponse.self, decoder: decoder)
+                .decode(type: WeatherResponseNet.self, decoder: decoder)
                 .receive(on: DispatchQueue.main)
                 .eraseToAnyPublisher()
             

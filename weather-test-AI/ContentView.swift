@@ -11,11 +11,12 @@ import Observation
 struct ContentView: View {
     @State private var isLoading = false
     @State private var errorMessage: String?
-    @StateObject private var multiplePiecesTogether = MultiplePiecesTogether(pieces: [InformationPieceModelNet(title: "In my head",
-                                                                                                               description: "", image: "",link: "", sunshineDayInYourHead: true),
-                                                                                      InformationPieceModelNet(title: "Toronto TV",
-                                                                                                               description: "", image: "",link: "", sunshineDayInYourHead: true)
-    ])
+    @StateObject private var multiplePiecesTogether = MultiplePiecesTogether(netPieces: PiecesNetworkService().fetchData()) 
+//    MultiplePiecesTogether(pieces: [InformationPieceModelNet(title: "In my head",
+//                                                                                                               description: "", image: "",link: "", sunshineDayInYourHead: true),
+//                                                                                      InformationPieceModelNet(title: "Toronto TV",
+//                                                                                                               description: "", image: "",link: "", sunshineDayInYourHead: true)
+//    ])
     
     private let latitude: Double = 52.2297
     private let longitude: Double = 21.0122

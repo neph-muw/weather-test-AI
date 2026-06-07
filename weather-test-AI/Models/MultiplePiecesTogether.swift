@@ -16,12 +16,15 @@ import Combine
     
     var count: Int { pieces.count }
     
-    init(pieces: [InformationPieceModelNet]) {
-        self.pieces = pieces.map() { netPiece in
-            let piece = InformationPieceModel(title: netPiece.title,
-                                              description: netPiece.description)
-            piece.image =  Image(netPiece.image)
-            piece.link = URL(string: netPiece.link) ?? URL(string: "Error URL is nil")!
+    init(netPieces: [InformationPieceModelNet]) {
+        self.pieces = netPieces.map() { netPiece in
+            
+            let piece = InformationPieceModel(id: UUID(),
+                                           title: netPiece.title,
+                                           description: netPiece.description,
+                                           image: Image(systemName: netPiece.image),
+                                           link: URL(string: netPiece.link) ?? URL(string: "Error URL is nil")!,
+                                           sunshineDayInYourHead: false)
             
             return piece
         }
